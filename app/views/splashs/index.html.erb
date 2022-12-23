@@ -16,7 +16,7 @@
 <div class="d-grid gap-2 paddingspace">
     <% if user_signed_in? %>
      <a href="categories"  class="btn btn-md btn-primary">Categories</a>
-    <%= link_to "Log out", destroy_user_session_path, :method=>'delete', class: 'btn btn-md btn-danger' %>
+     <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-md btn-danger'  %>
     
     <% else %>
        <a href="users/sign_in"  class="btn btn-md btn-color">Login</a>

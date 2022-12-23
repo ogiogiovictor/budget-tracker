@@ -1,5 +1,6 @@
 class ExpensesController < ApplicationController
     before_action :authenticate_user!
+    before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
 
     def index
@@ -32,6 +33,23 @@ class ExpensesController < ApplicationController
         end
     end
 
+    def edit
+       
+    end
+
+    def update
+        if @expense.update(expense_params)
+            redirect_to @expense
+        else
+            render :edit
+        end
+    end
+
+    def destroy
+        @expense.destroy
+        redirect_to expenses_path
+    end
+
     private
 
     def expense_params
@@ -39,5 +57,9 @@ class ExpensesController < ApplicationController
         params.require(:expense).permit(:name, :amount, :date_of_expense, :category_id)
     end
    
+    def set_blog
+        @expense = Expense.find(params[:id])
+        @categories = Category.where(user_id: current_user.id).order(:name)
+    end 
 
 end

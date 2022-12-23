@@ -51,8 +51,17 @@
     background-color: #3778c2;
     padding:10px;
     text-align: center;
-    color:#fff
+    color:#fff;
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
 }
+
+.top-heading > a{
+    color: #fff;
+    text-decoration: none;
+    margin-top:5px;
+ }
 
 a:link {
     color: black;
