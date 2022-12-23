@@ -34,13 +34,12 @@
 - Bootstrap
 - JQuery
 - Ruby
-- Bubocop
+- Rubocop
 - Gems
   - Rspec
   - Capybara
   - Selenium-webdriver
   - Bcrypt
-  - Letter-opener
   - cancancan
   - Devise
   - FactoryBot
@@ -88,7 +87,7 @@ The end result should follow the following data model (this is an Entity Relatio
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
-[video link ](https://www.loom.com/share/a8439109f6984dbd9c3ac177d94cc580)
+[video link ](https://www.loom.com/share/8b236ec2435c4fd7940cec5fa2c81c7a)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -128,11 +127,11 @@ To run the project, execute the following command:
 
 ## 👥 Authors <a name="authors"></a>
 
-## 👤 Aleazar Yilma
+## 👤 Ogiogio Victor
 
-- GitHub: [@Agetuni](https://github.com/Agetuni)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/aleazaryilma/)
-- AngelList: [timo-wester](https://angel.co/u/aleazar-yilma-1)
+- GitHub: [@githubhandle](https://github.com/ogiogiovictor)
+- Twitter: [@twitterhandle](https://twitter.com/ogiogiovictor)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/ogiogiovictor)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

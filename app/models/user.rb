@@ -9,5 +9,4 @@ class User < ApplicationRecord
 
   has_many :expenses, foreign_key: :user_id, dependent: :destroy
   has_many :categories, foreign_key: :user_id, dependent: :destroy
-
 end
