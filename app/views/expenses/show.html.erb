@@ -1,0 +1,35 @@
+<div class="main_splash">
+<div class="box">
+<div class="top-heading">
+ <h5>Expenses Details</h5>
+ <div> <%= @expense.name.upcase %> </div>
+</div>
+
+<div class="content-area">
+
+<div class="mainAreaX">
+
+    <div class="mainImage">
+    <center><%= link_to image_tag(@categories.image_as_thumbnail), @categories.image if @categories.image.attached? %></center>
+    </div>
+    <div class="mainContentArea">
+    <div class="mainTitle"> 
+    <span style="font-size:9px"><%= @expense.created_at.strftime("%Y-%m-%d") %></span>
+    <h3><%= @expense.name.upcase %> </h3>
+    </div>
+    <div class="mainDescription"><span style="font-size:11px">Amount</span></div>
+    </div>
+    <div class="mainDescription"><%= @expense.amount %></div><br/>
+
+     <div class="mainDescription"><span style="font-size:11px">Category</span></div>
+    <div class="mainDescription"><%= @categories.name %></div>
+
+</div>
+  
+
+<div>
+ <%= link_to "Edit Expense", edit_expense_path(@expense), class: "btn btn-color" %>
+ <%= link_to "Delete Expense", expense_path(@expense), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+</div>
+</div>
+</div>

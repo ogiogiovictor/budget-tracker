@@ -1,0 +1,19 @@
+<%= render 'shared/errors', obj: @category %>
+
+<%= form_with(model: @category) do |f|  %>
+
+<p>
+<%= f.label :name %><br/>
+<%= f.text_field :name, placeholder: 'Category Name', class: 'form-control' %>
+</p>
+
+<p>
+<%= f.label :image %><br/>
+<%= f.file_field :image, class: 'form-control' %>
+</p>
+
+ <div class="d-grid gap-2 paddingspace">
+<%= f.submit(@category.new_record? ? "Add Category" : "Update Category") %>
+</div>
+
+<% end %>

@@ -1,0 +1,29 @@
+<div class="main_splash">
+<div class="box">
+<div class="top-heading">
+ <h5>My Category Expenses</h5>
+ <div> <%= @category.name.upcase %> </div>
+</div>
+ <div class="badge-success expensetotal">Total Expense Amount  ₦<%= number_with_delimiter(@total) %></div>
+ <div class="clearboth"></div>
+<div class="content-area">
+
+   <% @expenses.each do |exp| %>
+
+    <div class="mainArea">
+        
+        <div class="mainContentArea">
+            <div class="mainTitle"> <a href="/expenses/<%= exp.id %>"><h6><%= exp.name %> </h6></a></div>
+            <div class="mainDescription"><span style="font-size:11px"><%= exp.date_of_expense.strftime("%Y-%m-%d") %></span></div>
+        </div>
+        <div class="mainDescription"><%= exp.amount %></div>
+    </div>
+   <% end %>
+  
+
+    <div class="d-grid gap-2">
+     <%= link_to "Add Expense", new_expense_path, class: "btn btn-block btn-color" %>
+    </div>
+</div>
+</div>
+</div>
