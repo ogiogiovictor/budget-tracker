@@ -19,14 +19,14 @@ default: &default
   encoding: unicode
   post: 5432
   username: ogiogiovictor
-  password: 5CtGGkuwLRWQlqh4a9Ac7Ql9JdRnwnta
+  password: lovejoy
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: budgetapp_xklx
+  database: expensetracker
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -60,7 +60,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: budgetapp_test
+  database: expenseTracker_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: budgetapp_xklx
-  username: ogiogiovictor
-  password: 5CtGGkuwLRWQlqh4a9Ac7Ql9JdRnwnta
+  database: expenseTracker_production
+  username: budgetApp
+  password: <%= ENV["BUDGETAPP_DATABASE_PASSWORD"] %>
