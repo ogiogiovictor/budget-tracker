@@ -83,8 +83,12 @@ The end result should follow the following data model (this is an Entity Relatio
 > ![](https://github.com/microverseinc/curriculum-rails/raw/main/capstone/images/erd_diagram.png)
 <!-- LIVE DEMO -->
 
-## 🚀 Live Demo <a name="live-demo"></a>
+## 🚀 Video Demo <a name="video-demo"></a>
 [video link ](https://www.loom.com/share/8b236ec2435c4fd7940cec5fa2c81c7a)
+
+## 🚀 Live Demo <a name="live-demo"></a>
+[video link ](https://budget-tracker-xjgx.onrender.com/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
