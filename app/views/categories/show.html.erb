@@ -1,8 +1,8 @@
 <div class="main_splash">
 <div class="box">
 <div class="top-heading">
-<a href="/categories"><< Back </a>
- <h5>Category Expenses: <%= @category.name.upcase %></h5>
+ <a href="/categories"><i class="fa-solid fa-backward"></i></a>
+ <h5><%= @category.name.upcase %> CATEGORY EXPENSE </h5>
 
 </div>
  <div class="badge-success expensetotal">Total Expense Amount  ₦<%= number_with_delimiter(@total) %></div>
@@ -23,7 +23,7 @@
   
 
     <div class="d-grid gap-2">
-     <%= link_to "Add Expense", new_expense_path, class: "btn btn-block btn-color" %>
+     <%= link_to "Add Expense", new_expense_path, class: 'buttonpadd btn-lg btn-down-color' %>
     </div>
 </div>
 </div>

@@ -13,7 +13,7 @@
 </p>
 
  <div class="d-grid gap-2 paddingspace">
-<%= f.submit(@category.new_record? ? "Add Category" : "Update Category") %>
+<%= f.submit(@category.new_record? ? "Add" : "Update", class: 'buttonpadd btn-lg btn-down-color') %>
 </div>
 
 <% end %>
