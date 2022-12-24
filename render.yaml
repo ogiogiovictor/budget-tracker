@@ -23,7 +23,7 @@
 
 databases:
   - name: my-database
-    databaseName: capston_database
+    databaseName: capston_database_gbky
     user: ogiogiovictor
 
 services:
