@@ -84,6 +84,7 @@ test:
 #
 production:
   <<: *default
+  url: <%= ENV["DATABASE_URL"] %>
   database: budgetapp_xklx
   username: budgetApp
-  password: 5CtGGkuwLRWQlqh4a9Ac7Ql9JdRnwnta
+  password: <%= ENV["RENDER_DEPLOY_DATABASE_PASSWORD"] %>
