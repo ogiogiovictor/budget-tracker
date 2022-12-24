@@ -19,14 +19,14 @@ default: &default
   encoding: unicode
   post: 5432
   username: ogiogiovictor
-  password: 5CtGGkuwLRWQlqh4a9Ac7Ql9JdRnwnta
+  password: lovejoy
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: budgetapp_xklx
+  database: budgetapp
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -85,5 +85,5 @@ test:
 production:
   <<: *default
   database: budgetapp_xklx
-  username: ogiogiovictor
+  username: budgetApp
   password: 5CtGGkuwLRWQlqh4a9Ac7Ql9JdRnwnta
