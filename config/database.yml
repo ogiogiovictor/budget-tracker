@@ -85,7 +85,7 @@ test:
 production:
   <<: *default
   url: <%= ENV["DATABASE_URL"] %>
-  database: capston_database_gbky
+  database: capston_database_gbky_ghi4
   username: ogiogiovictor
   # password: <%= ENV["RENDER_DEPLOY_DATABASE_PASSWORD"] %>
-  password: moZh1z2ND5mnqEpycgiSzCF5WPHUKMXv
+  # password: moZh1z2ND5mnqEpycgiSzCF5WPHUKMXv
