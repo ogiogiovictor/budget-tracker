@@ -1,0 +1,29 @@
+<div class="main_splash">
+
+ 
+
+<div class="box">
+ <% if user_signed_in? %>
+    <span class="pushright">Welcome <%= current_user.name.upcase %></span>
+    <span class="clearboth"></span>
+<% end %>
+    <h2 class="pushcenter">Budget Tracker</h2>
+       
+    
+        <%# <a href="users/sign_in"  class="btn btn-md btn-color">Login</a>
+        <a href="users/sign_up"  class="btn btn-md btn-default">Signup</a> %>
+    
+<div class="d-grid gap-2 paddingspace">
+    <% if user_signed_in? %>
+     <a href="categories"  class="btn btn-md btn-primary">Categories</a>
+     <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: 'btn btn-md btn-danger'  %>
+    
+    <% else %>
+       <a href="users/sign_in"  class="btn btn-md btn-color">Login</a>
+        <a href="users/sign_up"  class="btn btn-md btn-default">Signup</a>
+    <% end %>
+    </div>
+
+</div>
+</div>
+

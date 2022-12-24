@@ -1,0 +1,33 @@
+<%= render 'shared/errors', obj: @expense %>
+
+<%= form_with(model: @expense) do |f|  %>
+
+<p>
+<%= f.label :date %><br/>
+<%= f.date_field :date_of_expense, :class => "form-control" %>
+<p>
+
+<%= f.label :name %><br/>
+<%= f.text_field :name, placeholder: 'Add Expense Name', class: 'form-control' %>
+</p>
+
+<p>
+<%= f.label :amount %><br/>
+<%= f.number_field :amount, class: 'form-control' %>
+</p>
+
+<p>
+<%= f.label :category %><br/>
+  <%= f.select :category_id, @categories.map { |category| [category.name, category.id] }, {:required => true, include_hidden: false, include_blank: ' select '}, {:class => 'form-control', :multiple => false} %>
+<!--<select class="form-control">
+    <%= @categories.each do |cat| %>
+        <option value="<%= cat.id %>"><%= cat.name %></option>
+     <% end %>
+    </select>-->
+</p>
+
+ <div class="d-grid gap-2 paddingspace">
+<%= f.submit(@expense.new_record? ? "Add Expense" : "Update Expense", class: 'buttonpadd btn-lg btn-down-color') %>
+</div>
+
+<% end %>

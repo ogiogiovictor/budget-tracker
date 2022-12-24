@@ -1,0 +1,36 @@
+<div class="main_splash">
+<div class="box">
+    <div class="top-heading">
+       <a href="/"><i class="fa-solid fa-bars bar-align"></i></a>
+        <h5>Expense Categories</h5>
+    </div>
+
+    <div class="content-area">
+
+    <% @categories.each do |cat|  %>
+
+    <div class="mainArea">
+        <%# <div class="mainImage"><%= image_tag(cat.image) %>
+         <div class="mainImage"><%= link_to image_tag(cat.image_as_thumbnail), cat.image if cat.image.attached? %></div>
+        
+       
+        <div class="mainContentArea">
+            <div class="mainTitle"> <a href="/categories/<%= cat.id %>"><h6><%= cat.name %> </h6></a></div>
+            <div class="mainDescription"><span style="font-size:11px"><%= cat.created_at.strftime("%Y-%m-%d") %></span></div>
+        </div>
+        <div class="mainDescription">
+            ₦<%= number_with_delimiter(cat.expenses.sum(:amount)) %>
+        </div>
+    </div>
+    <%# <span>&nbsp;</span> %>
+    <% end %>
+
+        <div class="d-grid gap-2">
+         <%= link_to "Add Category", new_category_path, class: 'buttonpadd btn-lg btn-down-color' %>
+          
+        </div>
+
+    </div>
+
+</div>
+</div>
