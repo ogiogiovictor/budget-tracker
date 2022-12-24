@@ -99,9 +99,9 @@ a:hover {
   flex-direction: column;
 }
 
-.mainContentArea {
+/* .mainContentArea {
   flex: 3;
-}
+} */
 
 .mainImage {
   flex: 1;
